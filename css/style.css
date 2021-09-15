@@ -1,0 +1,132 @@
+body {
+    background-color: burlywood;
+    background-image: url(../image/fon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    font-family: 'Roboto', sans-serif;
+}
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1735px;
+    margin: 0 auto;
+    position: relative;
+
+}
+.nav {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+.nav>li {
+    padding-left: 10px;
+    margin-left: 10px;
+}
+.nav>li>a {
+    text-decoration: none;
+    color: #d4ad84;
+}
+.banner {
+    padding-bottom: 39px;
+}
+.sposobnosti {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    order: 1;
+}
+.roadhouse {
+    align-self: center;
+    order: 2;
+    left: 0;
+    top: -61px;
+}
+.pillowright {
+    align-self: center;
+    order: 3;
+}
+.alphabet {
+    align-self: center;
+}
+.alphabet2 {
+    align-self: center;
+}
+.alphabet3 {
+    align-self: center;
+}
+.alphabet4 {
+    align-self: center;
+}
+.alphabet5 {
+    align-self: center;
+}
+.blockalphabet {
+    display: flex;
+    flex-direction: column;
+    order: 4;
+}
+.pravila {
+    justify-content: space-around;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1735px;
+    margin: 0 auto;
+    position: relative;
+}
+.zagolovok {
+    color: #b65549;
+}
+.opisanie {
+    color: #deba94;
+}
+
+
+
+
+
+  .registration-cssave{
+    padding:50px 500px;
+  }
+  
+  .registration-cssave form {
+    max-width:800px;
+    padding:50px 70px;
+    border-radius:10px;
+    box-shadow:4px 4px 15px rgba(0, 0, 0, 0.2);
+    background-color:#fff;
+  }
+  
+  .registration-cssave form h3 {
+    font-weight:bold;
+    margin-bottom:30px;
+  }
+  
+  .registration-cssave .item {
+    border-radius:10px;
+    margin-bottom:25px;
+    padding:10px 20px;
+  }
+  
+  .registration-cssave .create-account {
+    border-radius:30px;
+    padding:10px 20px;
+    font-size:18px;
+    font-weight:bold;
+    background-color:#3f93ff;
+    border:none;
+    color:white;
+    margin-top:20px;
+  }
+  
+  @media (max-width: 576px) {
+    .registration-cssave form {
+      padding:50px 20px;
+    }
+  }
