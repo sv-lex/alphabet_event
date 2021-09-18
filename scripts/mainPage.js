@@ -1,11 +1,11 @@
 ( function( $ ) {
 
   var playersData =
-  '[{"name": "dizzert","avatar": "dizzert.png","position":20},'+
-  '{"name": "dick","avatar": "dizzert.png","position":10},'+
-  '{"name": "dave","avatar": "dizzert.png","position":16},'+
-  '{"name": "mike","avatar": "dizzert.png","position":6},'+
-  '{"name": "van","avatar": "dizzert.png","position":25}]';
+  '[{"name": "dizzert","position":6},'+
+  '{"name": "gothicok","position":7},'+
+  '{"name": "roadhouse","position":15},'+
+  '{"name": "billy","position":6},'+
+  '{"name": "van","position":25}]';
   ;
 
   var players = jQuery.parseJSON(playersData);
@@ -30,10 +30,10 @@
     let $currentDiv = $( '.char' + players[i].position);
 
     $( '<div>', {class: 'avatarDiv'} )
-    .html( `<img src="./image/avatars/` + players[i].avatar + `" width="40%">` ).appendTo( $currentDiv )
+    .html( `<img src="./image/avatars/` + players[i].name + `.png" width="40%">` ).appendTo( $currentDiv )
     .click(function() {
       console.log(i);
-      alert(abc[i]);
+      alert(players[i].name);
     });
 
   }
