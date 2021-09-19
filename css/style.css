@@ -1,5 +1,6 @@
 body {
     background-image: url(../image/fon.png);
+    background-size: cover;
 }
 
 .navigation {
@@ -32,6 +33,16 @@ a:link {
   height:150px;
   display:inline-block;
   vertical-align: middle;
+}
+
+.rules {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%);
+  width: 80%;
+  padding:10pt;
 }
 
 .avatarDiv {
