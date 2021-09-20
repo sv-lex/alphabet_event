@@ -1,17 +1,18 @@
 ( function( $ ) {
 
   var playersData =
-  '[{"name": "dizzert","position":6},'+
-  '{"name": "gothicok","position":7},'+
-  '{"name": "roadhouse","position":15},'+
-  '{"name": "billy","position":6},'+
-  '{"name": "van","position":25}]';
+  '[{"name": "dizzert","position":6, "game": "gay website"},'+
+  '{"name": "gothicok","position":7, "game": "hades"},'+
+  '{"name": "roadhouse","position":15, "game": "pong"},'+
+  '{"name": "billy","position":6, "game": "gay party"},'+
+  '{"name": "van","position":25, "game": "zoo tycoon"}]';
   ;
 
   var players = jQuery.parseJSON(playersData);
 
   const $charString = $( '.blockalphabet' );
   const $streamersList = $( '.streamers' );
+  // const $position = $( '.position' );
 
   var abc = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
@@ -27,6 +28,7 @@
 //добавляем аватары на нужные позиции
   for (let i = 0; i < players.length; i++) {
     let $currentDiv = $( '.char' + players[i].position);
+    console.log($currentDiv);
     $( '<div>', {class: 'avatarDiv'} )
     .html( `<img src="./image/avatars/` + players[i].name + `.png" width="40%">` ).appendTo( $currentDiv )
     .click(function() {
@@ -35,13 +37,18 @@
     });
   }
 
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < players.length; i++) {
       $( '<div>', {class: players[i].name})
-      .html( `<img src="./tmp/roadhouse.png" width="300 px">` ).appendTo( $streamersList )
-      // .click(function() {
-      //   console.log(i);
-      //   alert(abc[i]);
-      // });
+      .html( `<img src="./tmp/roadhouse.png" width="300px">` ).appendTo( $streamersList )
   }
+
+  //добавляем прогресс
+    // for (let i = 0; i < players.length; i++) {
+    //   let $currentPosition = $('.' + players[i].name);
+    //   console.log(players[i].name);
+    //   $( '<div>', {class: 'progressText'} )
+    //   .html( `<p> ` + (players[i].position + 1) + `/26 </br> <p> ` + players[i].game + `` ).appendTo( $currentPosition )
+    //   console.log($currentPosition);
+    // }
 
 } )( jQuery );

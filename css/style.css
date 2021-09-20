@@ -48,15 +48,19 @@ a:link {
 
 .streamers > div{
   margin:10pt;
-  /* padding:10pt; */
-  /* width:140px; */
   display:inline-block;
   vertical-align: middle;
 }
 
+.progressText {
+  position: absolute;
+    color: #d4ad84;
+    top: 72%;
+}
+
 .rules {
   position: absolute;
-  top: 160%;
+  top: 100%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%);
