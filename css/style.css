@@ -35,9 +35,28 @@ a:link {
   vertical-align: middle;
 }
 
+.streamers {
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-align:center;
+  padding:10pt;
+}
+
+.streamers > div{
+  margin:10pt;
+  /* padding:10pt; */
+  /* width:140px; */
+  display:inline-block;
+  vertical-align: middle;
+}
+
 .rules {
   position: absolute;
-  top: 100%;
+  top: 160%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%);

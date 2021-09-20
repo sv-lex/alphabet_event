@@ -11,6 +11,7 @@
   var players = jQuery.parseJSON(playersData);
 
   const $charString = $( '.blockalphabet' );
+  const $streamersList = $( '.streamers' );
 
   var abc = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
@@ -32,6 +33,15 @@
       console.log(i);
       alert(players[i].name);
     });
+  }
+
+  for (let i = 0; i < 5; i++) {
+      $( '<div>', {class: players[i].name})
+      .html( `<img src="./tmp/roadhouse.png" width="300 px">` ).appendTo( $streamersList )
+      // .click(function() {
+      //   console.log(i);
+      //   alert(abc[i]);
+      // });
   }
 
 } )( jQuery );
