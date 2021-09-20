@@ -18,10 +18,10 @@
 
   for (let i = 0; i < abc.length; i++) {
       $( '<div>', {class: 'char' + i + ''})
-      .html( `<img src="./image/letters/` + abc[i] + `.png" width="110" height="150">` ).appendTo( $charString )
+      .html( `<a href="games.php?letter=` + abc[i]+ `"><img src="./image/letters/` + abc[i] + `.png" width="110" height="150">` ).appendTo( $charString )
       .click(function() {
         console.log(i);
-        alert(abc[i]);
+        // alert(abc[i]);
       });
   }
 
@@ -30,17 +30,16 @@
     let $currentDiv = $( '.char' + players[i].position);
     console.log($currentDiv);
     $( '<div>', {class: 'avatarDiv'} )
-    .html( `<img src="./image/avatars/` + players[i].name + `.png" width="40%">` ).appendTo( $currentDiv )
+    .html( `<a href="private.php?user=` + players[i].name + `"><img src="./image/avatars/` + players[i].name + `.png" width="40%">` ).appendTo( $currentDiv )
     .click(function() {
       console.log(i);
-      alert(players[i].name);
     });
   }
 
-  for (let i = 0; i < players.length; i++) {
-      $( '<div>', {class: players[i].name})
-      .html( `<img src="./tmp/roadhouse.png" width="300px">` ).appendTo( $streamersList )
-  }
+  // for (let i = 0; i < players.length; i++) {
+  //     $( '<div>', {class: players[i].name})
+  //     .html( `<img src="./tmp/roadhouse.png" width="300px">` ).appendTo( $streamersList )
+  // }
 
   //добавляем прогресс
     // for (let i = 0; i < players.length; i++) {
