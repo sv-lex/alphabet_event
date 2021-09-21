@@ -20,9 +20,18 @@
 
       try {
         $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
+        echo "<table>";
         foreach($db->query("SELECT * FROM `games` WHERE `game_letter` = '$letter'") as $row) {
-            echo "<li>" . $row['game_name'] . "</li>";
+            // echo "<td>" . $row['game_name'] . "</td>";
+            echo "
+            <tr>
+              <td>" . $row['game_name'] . "</td>
+              <td> <a href='https://store.steampowered.com/app/" . $row['steam_appid'] . "'>steam</a> </td>
+              <td> <a href='https://howlongtobeat.com/game?id=" . $row['hltb_id'] . "'>hltb</a> </td>
+              <td> <a href='https://www.metacritic.com/game/pc/" . $row['metacritic_url'] . "'>metacritic</a> </td>
+            </tr>";
         }
+        echo "</table>";
 
       } catch (PDOException $e) {
           print "Error!: " . $e->getMessage() . "<br/>";
