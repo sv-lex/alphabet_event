@@ -26,8 +26,11 @@
             echo "
             <tr>
               <td>" . $row['game_name'] . "</td>
+              <td> / </td>
               <td> <a href='https://store.steampowered.com/app/" . $row['steam_appid'] . "'>steam</a> </td>
+              <td> / </td>
               <td> <a href='https://howlongtobeat.com/game?id=" . $row['hltb_id'] . "'>hltb</a> </td>
+              <td> / </td>
               <td> <a href='https://www.metacritic.com/game/pc/" . $row['metacritic_url'] . "'>metacritic</a> </td>
             </tr>";
         }
