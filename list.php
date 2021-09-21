@@ -10,9 +10,28 @@
 
       <?php
       $letter = !empty($_GET['letter']) ? $_GET['letter'] : 'логин не передан!';
+
+      // $letter = !empty($_GET['letter']) ? $_GET['letter'];
+
+      $user = "dizzert";
+      $password = "megaPasswd1";
+      $database = "alphabet";
+      $table = "games";
+
+      try {
+        $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
+        foreach($db->query("SELECT * FROM `games` WHERE `game_letter` = '$letter'") as $row) {
+            echo "<li>" . $row['game_name'] . "</li>";
+        }
+
+      } catch (PDOException $e) {
+          print "Error!: " . $e->getMessage() . "<br/>";
+          die();
+      }
+
       ?>
 
-      <p> the letter is:  <?= $letter ?> </p>
+      <!-- <p> the letter is:  <?= $letter ?> </p> -->
 
     </body>
 </html>
