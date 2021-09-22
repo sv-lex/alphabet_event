@@ -18,10 +18,13 @@
 
   for (let i = 0; i < abc.length; i++) {
       $( '<div>', {class: 'char' + i + ''})
-      .html( `<a href="list.php?letter=` + abc[i]+ `"><img src="./image/letters/` + abc[i] + `.png" width="110" height="150">` ).appendTo( $charString )
+      // .html( `<a href="list.php?letter=` + abc[i]+ `"><img src="./image/letters/` + abc[i] + `.png" width="110" height="150">` ).appendTo( $charString )
+        .html( `<img src="./image/letters/` + abc[i] + `.png" width="110" height="150">` ).appendTo( $charString )
       .click(function() {
         console.log(i);
         // alert(abc[i]);
+        $( '<div>', {class: 'letterFrame'})
+        .html( `<iframe src="list.php?letter=` + abc[i]+ `" width="468" height="60" align="left">` ).appendTo( $('body') );
       });
   }
 
