@@ -24,7 +24,8 @@
         console.log(i);
         // alert(abc[i]);
         $( '<div>', {class: 'letterFrame'})
-        .html( `<iframe src="list.php?letter=` + abc[i]+ `" width="468" height="60" align="left">` ).appendTo( $('body') );
+        // .html( `<iframe src="list.php?letter=` + abc[i]+ `" width="468" height="60" align="left">` ).appendTo( $('body') );
+        .html( `<iframe src="list.php?letter=` + abc[i]+ `">` ).appendTo( $('body') );
       });
   }
 

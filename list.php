@@ -9,6 +9,7 @@
     <body>
 
       <div class="gameslist">
+        <!-- <img id="listBackFrame" src="../tmp/tablo.png"> -->
 
         <?php
         $letter = !empty($_GET['letter']) ? $_GET['letter'] : 'логин не передан!';
@@ -20,7 +21,7 @@
 
         try {
           $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
-          echo "<table>";
+          echo "<div class='listPosition'><table>";
           foreach($db->query("SELECT * FROM `games` WHERE `game_letter` = '$letter'") as $row) {
               echo "
               <tr>
@@ -33,7 +34,7 @@
                 <td> <a href='https://www.metacritic.com/game/pc/" . $row['metacritic_url'] . "'>metacritic</a> </td>
               </tr>";
           }
-          echo "</table>";
+          echo "</table></div>";
 
         } catch (PDOException $e) {
             print "Error!: " . $e->getMessage() . "<br/>";
