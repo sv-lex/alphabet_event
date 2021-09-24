@@ -9,7 +9,7 @@
     <body>
 
       <div class="gameslist">
-        <!-- <img id="listBackFrame" src="../tmp/tablo.png"> -->
+        <img id="listBackFrame" src="../tmp/tablo.png">
 
         <?php
         $letter = !empty($_GET['letter']) ? $_GET['letter'] : 'логин не передан!';
